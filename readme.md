@@ -56,3 +56,4 @@ You can enable a debug interface by getting the contents of "debug.js" file and 
 Would be really appreciated if you are willing to give me a star here on GitHub 🎉 or buy me a coffee ☕ https://www.buymeacoffee.com/andersonmancini. The money will be used to produce more content about threejs or to buy new courses.
 
 I plan to add more functionality to this over time, like the ability to use advanced controls, particle systems, etc. If you have any questions or somewhere I can do better, welcome to send an <a href="mailto:andersonmancini30@gmail.com">e-mail</a> to me 🙏# ToyDrone
+# ToyDrone
