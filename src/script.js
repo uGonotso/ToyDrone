@@ -592,4 +592,5 @@ function attackClicked(){
   }
   states.push('attack');
   logStates();
+  
 }
