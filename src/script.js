@@ -391,7 +391,7 @@ function animate() {
         if (oneUnit > 0){
           drone.translateZ(0.05);
           oneUnit -= 0.05;
-          console.log(oneUnit);
+          //console.log(oneUnit);
         }
         if (oneUnit < 0){
           states.shift()
@@ -399,20 +399,21 @@ function animate() {
           console.log(oneUnit);
           if (drone.facing == 'north'){
             drone.coordinateY += 1;
+            currentState = 'idle';
           }
           if (drone.facing == 'south'){
             drone.coordinateY -= 1;
+            currentState = 'idle';
           }
           if (drone.facing == 'west'){
             drone.coordinateX -= 1;
+            currentState = 'idle';
           }
           if (drone.facing == 'east'){
             drone.coordinateX += 1;
-          }
-          
-          else{
             currentState = 'idle';
           }
+          
         }
       }
     }
