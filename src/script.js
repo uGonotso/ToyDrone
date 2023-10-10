@@ -49,7 +49,7 @@ const xValueElement = document.querySelector('#xvalue');
 const yValueElement = document.querySelector('#yvalue');
 const facingElement = document.querySelector('#facing')
 
-let oneUnit = 5.1;
+let oneUnit = 5;
 let twoUnit = 10;
 let missileLaunched = false;
 let states = ['start'];
@@ -127,8 +127,8 @@ function introAnimation() {
     
     new TWEEN.Tween(camera.position.set(26,4,-35 )).to({ // from camera position
         x: 0, //desired x position to go
-        y: 35, //desired y position to go
-        z: 35 //desired z position to go
+        y: 45, //desired y position to go
+        z: 17 //desired z position to go
     }, 6500) // time take to animate
     .delay(1000).easing(TWEEN.Easing.Quartic.InOut).start() // define delay, easing
     .onComplete(function () { //on finish animation
@@ -185,7 +185,7 @@ function animate() {
         }
         if (nextState == 'move'){
           currentState = 'move'
-          oneUnit = 5.15;
+          oneUnit = 4.74;
         }
         if(nextState == 'west'){
           currentState = 'facing'
@@ -240,22 +240,22 @@ function animate() {
       else{
         console.log("placed state")
           if (drone.coordinateX > states[1]){
-            drone.position.x -= 0.05;
+            drone.position.x -= 0.052;
             drone.coordinateX -= 0.01;
             
           }
           if (drone.coordinateX < states[1]){
-            drone.position.x += 0.05;
+            drone.position.x += 0.052;
             drone.coordinateX += 0.01;
            
           }
           if (drone.coordinateY > states[2]){
-            drone.position.z += 0.05;
+            drone.position.z += 0.052;
             drone.coordinateY -= 0.01;
             
           }
           if (drone.coordinateY < states[2]){
-            drone.position.z -= 0.05;
+            drone.position.z -= 0.052;
             drone.coordinateY += 0.01;
            
           }
@@ -367,25 +367,22 @@ function animate() {
 
     if (currentState == 'move'){
       if (drone.coordinateY == 0 && drone.facing == 'south'){
-        console.log("aint no way");
         states.shift();
         currentState = 'idle';
         return;
       }
       if (drone.coordinateX == 0 && drone.facing == 'west'){
-        console.log("aint no way");
+
         states.shift();
         currentState = 'idle';
         return;
       }
       if (drone.coordinateX == 9 && drone.facing == 'east'){
-        console.log("aint no way");
         states.shift();
         currentState = 'idle';
         return;
       }
       if (drone.coordinateY == 9 && drone.facing == 'north'){
-        console.log("aint no way");
         states.shift();
         currentState = 'idle';
         return;
@@ -432,28 +429,24 @@ function animate() {
       }
       
       if (drone.coordinateY <= 2 && drone.facing == 'south'){
-        console.log("aint no way");
         states.shift();
         scene.remove(missile);
         currentState = 'idle';
         return;
       }
       if (drone.coordinateX <= 2 && drone.facing == 'west'){
-        console.log("aint no way");
         states.shift();
         scene.remove(missile);
         currentState = 'idle';
         return;
       }
       if (drone.coordinateX >= 7 && drone.facing == 'east'){
-        console.log("aint no way");
         states.shift();
         scene.remove(missile);
         currentState = 'idle';
         return;
       }
       if (drone.coordinateY >= 7 && drone.facing == 'north'){
-        console.log("aint no way");
         states.shift();
         scene.remove(missile);
         currentState = 'idle';
@@ -592,5 +585,5 @@ function attackClicked(){
   }
   states.push('attack');
   logStates();
-  
+
 }
