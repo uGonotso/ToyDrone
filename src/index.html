@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Toy Drone</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="A threejs example using threejs boilerplate - by Anderson Mancini">
+
+        <meta property="og:url" content="https://threejs-andy-boilerplate.vercel.app/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="EKTOGAMAT THREEJS BOILERPLATE">
+        <meta property="og:description" content="A threejs example using threejs boilerplate - by Anderson Mancini">
+        <meta property="og:image" content="../static/cover.jpg">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="https://threejs-andy-boilerplate.vercel.app/">
+        <meta property="twitter:url" content="https://threejs-andy-boilerplate.vercel.app/">
+        <meta name="twitter:title" content="EKTOGAMAT THREEJS BOILERPLATE">
+        <meta name="twitter:description" content="A threejs example using threejs boilerplate - by Anderson Mancini">
+        <meta name="twitter:image" content="../static/cover.jpg">
+      
+        <meta name="keywords" content="ThreeJS, HTML, CSS, JavaScript">
+        <meta name="author" content="Anderson Mancini">
+        <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+        <link rel="manifest" href="../static/favicon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <div id="ui">
+            <h1>
+            <button id="place">Place</button>
+            <label for="x">X:</label> 
+            
+            <select name="xvalue" id="xvalue"> 
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    
+            </select>
+            <label for="y">Y:</label> 
+            <select name="yvalue" id="yvalue"> 
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    
+            </select>
+            
+            <label for="facing">F:</label> 
+            <select name="facing" id="facing"> 
+                    <option value="north">North</option>
+                    <option value="west">West</option>
+                    <option value="south">South</option>
+                    <option value="east">East</option>
+            </select>
+          <button id="move">Move</button>
+          <button id="left">Left</button>
+          <button id="right">Right</button>
+          <button id="report">Report</button>
+          <button id="attack">Attack</button>
+      
+          <div>
+            <label id="xlabel" for="xlabel">X-Coord: </label>
+            <label id="ylabel" for="ylabel">Y-Coord: </label>
+            <label id="flabel" for="flabel">Facing: </label>
+          </div>
+      
+          </h1>
+          </div>
+    </body>
+</html>
